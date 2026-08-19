@@ -28,7 +28,7 @@ const articles = Object.entries(articleFiles)
   .sort((first, second) => second.date.localeCompare(first.date));
 
 function getArticleSlug() {
-  return window.location.hash.match(/^#\/articles\/(.+)$/)?.[1] || null;
+  return window.location.pathname.match(/^\/articles\/([^/]+)\/?$/)?.[1] || null;
 }
 
 function renderArticle(content) {
@@ -57,25 +57,26 @@ function useCloudflareAnalytics(token) {
 
 function App() {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || "light");
-  const [articleSlug, setArticleSlug] = useState(getArticleSlug);
+  const [articleSlug] = useState(getArticleSlug);
   useCloudflareAnalytics(siteConfig.cloudflareAnalyticsToken);
   useEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
   useEffect(() => {
-    const handleRouteChange = () => setArticleSlug(getArticleSlug());
-    window.addEventListener("hashchange", handleRouteChange);
-    return () => window.removeEventListener("hashchange", handleRouteChange);
-  }, []);
+    const article = articles.find((item) => item.slug === articleSlug);
+    document.title = article ? `${article.title} — ${siteConfig.name}` : `${siteConfig.name} — Learning in public`;
+    const description = article?.summary || "Personal notes and learnings from software engineer Arpitha Murthy.";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+  }, [articleSlug]);
 
   const selectedArticle = articles.find((article) => article.slug === articleSlug);
 
   return <div className="site-shell">
     <header className="site-header">
-      <a className="wordmark" href="#top" aria-label="Arpitha Murthy home">AM<span>.</span></a>
-      <nav aria-label="Main navigation">{navItems.map((item) => <a key={item} href={`#${item.toLowerCase()}`}>{item}</a>)}</nav>
+      <a className="wordmark" href="/" aria-label="Arpitha Murthy home">AM<span>.</span></a>
+      <nav aria-label="Main navigation">{navItems.map((item) => <a key={item} href={`/#${item.toLowerCase()}`}>{item}</a>)}</nav>
       <button className="icon-button" onClick={() => setTheme(theme === "light" ? "dark" : "light")} aria-label="Toggle color theme">{theme === "light" ? <Moon size={18} /> : <Sun size={18} />}</button>
     </header>
 
-    {selectedArticle ? <main id="top" className="article-page"><a className="back-link" href="#notes">← All notes</a><article className="article-shell"><p className="article-date">{selectedArticle.date}</p><div className="article-body" dangerouslySetInnerHTML={{ __html: renderArticle(selectedArticle.content) }} /></article></main> : <main id="top">
+    {selectedArticle ? <main id="top" className="article-page"><a className="back-link" href="/#notes">← All notes</a><article className="article-shell"><p className="article-date">{selectedArticle.date}</p><div className="article-body" dangerouslySetInnerHTML={{ __html: renderArticle(selectedArticle.content) }} /></article></main> : <main id="top">
       <section className="hero section-grid" aria-labelledby="hero-title">
         <div className="hero-copy"><h1 id="hero-title">Hello, I’m <em>Arpitha.</em><br />I’m learning to understand some topics and share a my view.</h1><p className="hero-intro">I’m a software engineer who enjoys continuous learning, writing down what helps, and sharing it with others.</p><div className="hero-actions"><a className="button button-primary" href={siteConfig.linkedin} target="_blank" rel="noreferrer">Let’s connect <ArrowUpRight size={17} /></a><a className="text-link" href="#notes">See what I’m learning <span>↓</span></a></div></div>
         <div className="hero-aside" aria-label="Personal principles"><div className="aside-index" aria-hidden="true">AM</div><div className="aside-card"><p className="card-label">I try to live by</p><ul className="card-values"><li>Stay curious.</li><li>Build with care.</li><li>Share what I learn.</li></ul></div><span className="side-caption">01 / INTRO</span></div>
@@ -85,7 +86,7 @@ function App() {
 
       <section id="approach" className="approach section-grid section-rule" aria-labelledby="approach-title"><div className="section-kicker"><span>02</span><span>Approach</span></div><div className="approach-content"><div className="approach-heading"><h2 id="approach-title">How I like to work</h2><p>Not a process carved in stone — more like a few principles I return to.</p></div><div className="principles"><article><span className="principle-number">01</span><h3>Start with why</h3><p>Good solutions begin with a clear understanding of the people and problem behind the brief.</p></article><article><span className="principle-number">02</span><h3>Make it tangible</h3><p>Small experiments and honest feedback beat long stretches of guessing what might work.</p></article><article><span className="principle-number">03</span><h3>Leave it better</h3><p>Whether it’s code, documentation, or a conversation, I try to make the next step easier.</p></article></div></div></section>
 
-      <section id="notes" className="notes section-grid section-rule" aria-labelledby="notes-title"><div className="section-kicker"><span>03</span><span>Notes</span></div><div className="notes-content"><div className="notes-intro"><BookOpen size={21} /><h2 id="notes-title">Learning in public</h2><p>I’m making room here for the things I’m figuring out — practical notes, useful rabbit holes, and lessons I’d like to remember.</p></div><div className="learning-list">{articles.length > 0 ? articles.map((article) => <article className="learning-note" key={article.slug}><span>{article.date}</span><h3>{article.title}</h3><p>{article.summary}</p><a href={`#/articles/${article.slug}`}>Read note <ArrowUpRight size={15} /></a></article>) : <div className="coming-soon"><span>Coming soon</span><Check size={16} /><p>The first note is taking shape.</p></div>}</div></div></section>
+      <section id="notes" className="notes section-grid section-rule" aria-labelledby="notes-title"><div className="section-kicker"><span>03</span><span>Notes</span></div><div className="notes-content"><div className="notes-intro"><BookOpen size={21} /><h2 id="notes-title">Learning in public</h2><p>I’m making room here for the things I’m figuring out — practical notes, useful rabbit holes, and lessons I’d like to remember.</p></div><div className="learning-list">{articles.length > 0 ? articles.map((article) => <article className="learning-note" key={article.slug}><span>{article.date}</span><h3>{article.title}</h3><p>{article.summary}</p><a href={`/articles/${article.slug}/`}>Read note <ArrowUpRight size={15} /></a></article>) : <div className="coming-soon"><span>Coming soon</span><Check size={16} /><p>The first note is taking shape.</p></div>}</div></div></section>
 
       <section className="connect section-rule" aria-labelledby="connect-title"><p className="eyebrow">Have a thought to share?</p><h2 id="connect-title">Let’s learn something<br /><em>together.</em></h2><a className="button button-primary" href={siteConfig.linkedin} target="_blank" rel="noreferrer">Find me on LinkedIn <ArrowUpRight size={17} /></a></section>
     </main>}
