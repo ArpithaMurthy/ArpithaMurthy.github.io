@@ -41,9 +41,24 @@ function renderArticle(content) {
   return marked.parser(tokens);
 }
 
+function useCloudflareAnalytics(token) {
+  useEffect(() => {
+    if (!token || document.querySelector("script[data-cf-beacon]")) return;
+
+    const script = document.createElement("script");
+    script.defer = true;
+    script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    script.dataset.cfBeacon = JSON.stringify({ token });
+    document.body.appendChild(script);
+
+    return () => script.remove();
+  }, [token]);
+}
+
 function App() {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || "light");
   const [articleSlug, setArticleSlug] = useState(getArticleSlug);
+  useCloudflareAnalytics(siteConfig.cloudflareAnalyticsToken);
   useEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
   useEffect(() => {
     const handleRouteChange = () => setArticleSlug(getArticleSlug());
@@ -62,8 +77,8 @@ function App() {
 
     {selectedArticle ? <main id="top" className="article-page"><a className="back-link" href="#notes">← All notes</a><article className="article-shell"><p className="article-date">{selectedArticle.date}</p><div className="article-body" dangerouslySetInnerHTML={{ __html: renderArticle(selectedArticle.content) }} /></article></main> : <main id="top">
       <section className="hero section-grid" aria-labelledby="hero-title">
-        <div className="hero-copy"><h1 id="hero-title">Hello, I’m <em>Arpitha.</em><br />I’m learning to understand some topics and share a clearer view.</h1><p className="hero-intro">I’m a software engineer who enjoys continuous learning, writing down what helps, and sharing it with others.</p><div className="hero-actions"><a className="button button-primary" href={siteConfig.linkedin} target="_blank" rel="noreferrer">Let’s connect <ArrowUpRight size={17} /></a><a className="text-link" href="#notes">See what I’m learning <span>↓</span></a></div></div>
-        <div className="hero-aside" aria-label="Introduction note"><div className="aside-index" aria-hidden="true">AM</div><div className="aside-card"><p className="card-label">A small note</p><p className="card-quote">“Stay curious.<br />Build with care.<br />Share what you learn.”</p><p className="card-signature">— a work in progress</p></div><span className="side-caption">01 / INTRO</span></div>
+        <div className="hero-copy"><h1 id="hero-title">Hello, I’m <em>Arpitha.</em><br />I’m learning to understand some topics and share a my view.</h1><p className="hero-intro">I’m a software engineer who enjoys continuous learning, writing down what helps, and sharing it with others.</p><div className="hero-actions"><a className="button button-primary" href={siteConfig.linkedin} target="_blank" rel="noreferrer">Let’s connect <ArrowUpRight size={17} /></a><a className="text-link" href="#notes">See what I’m learning <span>↓</span></a></div></div>
+        <div className="hero-aside" aria-label="Personal principles"><div className="aside-index" aria-hidden="true">AM</div><div className="aside-card"><p className="card-label">I try to live by</p><ul className="card-values"><li>Stay curious.</li><li>Build with care.</li><li>Share what I learn.</li></ul></div><span className="side-caption">01 / INTRO</span></div>
       </section>
 
       <section id="about" className="about section-grid section-rule" aria-labelledby="about-title"><div className="section-kicker"><span>01</span><span>About</span></div><div className="about-content"><h2 id="about-title">I’m interested in the space between <span>people, ideas,</span> and technology.</h2><div className="about-columns"><p>I like working through unclear problems until I can explain them simply and build something useful from them. I’m still learning how to do that well.</p><p>Outside work, I’m usually reading a book, listening to a podcast, watching a series, or spending time with family. I also tend to notice the small details that make products easier to use.</p></div></div></section>

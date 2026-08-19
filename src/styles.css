@@ -300,17 +300,19 @@ h2 em {
   text-transform: uppercase;
 }
 
-.card-quote {
-  margin-bottom: 18px;
+.card-values {
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
   font-family: "DM Serif Display", Georgia, serif;
   font-size: 32px;
   line-height: 1.25;
 }
 
-.card-signature {
-  margin-bottom: 32px;
-  color: var(--cp-text-muted);
-  font-size: 12px;
+.card-values li::before {
+  margin-right: 10px;
+  color: var(--cp-accent);
+  content: "—";
 }
 
 .side-caption {
@@ -675,7 +677,7 @@ footer a:hover {
     font-size: 150px;
   }
 
-  .card-quote {
+  .card-values {
     font-size: 27px;
   }
 
