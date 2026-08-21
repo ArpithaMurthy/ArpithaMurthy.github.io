@@ -5,7 +5,6 @@ import { marked } from "marked";
 import { siteConfig } from "./siteConfig";
 import "./styles.css";
 
-const navItems = ["About", "Notes"];
 const featuredArticleSlugs = ["wellbeing"];
 const articleFiles = import.meta.glob("./articles/**/*.md", { query: "?raw", import: "default", eager: true });
 
@@ -104,7 +103,6 @@ function App() {
   return <div className="site-shell">
     <header className="site-header">
       <a className="wordmark" href="/" aria-label="Arpitha Murthy home">AM<span>.</span></a>
-      <nav aria-label="Main navigation">{navItems.map((item) => <a key={item} href={`/#${item.toLowerCase()}`}>{item}</a>)}</nav>
       <button className="icon-button" onClick={() => setTheme(theme === "light" ? "dark" : "light")} aria-label="Toggle color theme">{theme === "light" ? <Moon size={18} /> : <Sun size={18} />}</button>
     </header>
 
