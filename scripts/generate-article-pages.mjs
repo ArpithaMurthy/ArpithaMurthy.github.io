@@ -4,10 +4,14 @@ import path from "node:path";
 const siteUrl = "https://arpithamurthy.github.io";
 const articlesDirectory = path.resolve("src/articles");
 const outputDirectory = path.resolve("dist");
-const filenames = await readdir(articlesDirectory);
-const articleSlugs = filenames
-  .filter((filename) => filename.endsWith(".md") && !filename.startsWith("_"))
-  .map((filename) => filename.replace(".md", "").replace(/^\d{4}-\d{2}-\d{2}-/, ""));
+const articleFiles = await readdir(articlesDirectory, { recursive: true });
+const articleSlugs = articleFiles
+  .filter((filename) => filename.endsWith(".md") && !path.basename(filename).startsWith("_"))
+  .map((filename) => {
+    const basename = path.basename(filename, ".md");
+    const sourceName = basename === "index" ? path.basename(path.dirname(filename)) : basename;
+    return sourceName.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+  });
 
 for (const slug of articleSlugs) {
   const articleDirectory = path.join(outputDirectory, "articles", slug);

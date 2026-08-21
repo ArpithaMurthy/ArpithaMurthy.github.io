@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 728" role="img" aria-labelledby="title description">
+  <title id="title">Developer platform</title>
+  <desc id="description">One possible implementation of Developer platform</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#83796b"/></marker>
+    <style>
+      .boundary { fill: none; stroke: #b9afa2; stroke-width: 2; stroke-dasharray: 7 7; }
+      .node { fill: #fff; stroke: #83796b; stroke-width: 2; }
+      .primary { fill: #fbf3f5; stroke: #b11f4b; }
+      .line { fill: none; stroke: #83796b; stroke-width: 2.5; marker-end: url(#arrow); }
+      .step { fill: #242424; font: 600 18px Manrope, "Segoe UI", sans-serif; text-anchor: middle; }
+      .tech { fill: #b11f4b; font: 500 14px Consolas, "Courier New", monospace; text-anchor: middle; }
+      .note { fill: #5c5c5c; font: 500 14px Manrope, "Segoe UI", sans-serif; text-anchor: middle; }
+      .boundary-label { fill: #b11f4b; font: 600 14px Manrope, "Segoe UI", sans-serif; letter-spacing: .4px; text-anchor: middle; }
+      .legend-step { fill: #242424; font: 600 14px Manrope, "Segoe UI", sans-serif; }
+      .legend-tech { fill: #b11f4b; font: 500 13px Consolas, "Courier New", monospace; }
+    </style>
+  </defs>
+  
+  <text class="legend-step" x="64" y="48">Capability</text><text class="legend-tech" x="158" y="48">Technology</text>
+  <path class="line" d="M560 188 V225 H560 V254"/>
+<path class="line" d="M560 358 V395 H326 V424"/>
+<path class="line" d="M560 358 V395 H794 V424"/>
+<path class="line" d="M326 528 V565 H560 V594"/>
+<path class="line" d="M794 528 V565 H560 V594"/>
+  <g>
+      <rect class="node" x="340" y="92" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="126"><tspan x="560" dy="0">Developer portal and catalog</tspan></text>
+      <text class="tech" x="560" y="169">Backstage</text>
+    </g>
+<g>
+      <rect class="node primary" x="340" y="262" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="296"><tspan x="560" dy="0">Resource control plane</tspan></text>
+      <text class="tech" x="560" y="339">Crossplane</text>
+    </g>
+<g>
+      <rect class="node" x="106" y="432" width="440" height="96" rx="7"/>
+      <text class="step" x="326" y="466"><tspan x="326" dy="0">Workload runtime</tspan></text>
+      <text class="tech" x="326" y="509">Kubernetes</text>
+    </g>
+<g>
+      <rect class="node" x="574" y="432" width="440" height="96" rx="7"/>
+      <text class="step" x="794" y="466"><tspan x="794" dy="0">GitOps delivery</tspan></text>
+      <text class="tech" x="794" y="509">Argo CD</text>
+    </g>
+<g>
+      <rect class="node" x="340" y="602" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="636"><tspan x="560" dy="0">Telemetry</tspan></text>
+      <text class="tech" x="560" y="679">OpenTelemetry</text>
+    </g>
+</svg>

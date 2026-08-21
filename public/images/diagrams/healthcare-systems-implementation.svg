@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 728" role="img" aria-labelledby="title description">
+  <title id="title">Healthcare system</title>
+  <desc id="description">One possible implementation of Healthcare system</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#83796b"/></marker>
+    <style>
+      .boundary { fill: none; stroke: #b9afa2; stroke-width: 2; stroke-dasharray: 7 7; }
+      .node { fill: #fff; stroke: #83796b; stroke-width: 2; }
+      .primary { fill: #fbf3f5; stroke: #b11f4b; }
+      .line { fill: none; stroke: #83796b; stroke-width: 2.5; marker-end: url(#arrow); }
+      .step { fill: #242424; font: 600 18px Manrope, "Segoe UI", sans-serif; text-anchor: middle; }
+      .tech { fill: #b11f4b; font: 500 14px Consolas, "Courier New", monospace; text-anchor: middle; }
+      .note { fill: #5c5c5c; font: 500 14px Manrope, "Segoe UI", sans-serif; text-anchor: middle; }
+      .boundary-label { fill: #b11f4b; font: 600 14px Manrope, "Segoe UI", sans-serif; letter-spacing: .4px; text-anchor: middle; }
+      .legend-step { fill: #242424; font: 600 14px Manrope, "Segoe UI", sans-serif; }
+      .legend-tech { fill: #b11f4b; font: 500 13px Consolas, "Courier New", monospace; }
+    </style>
+  </defs>
+  
+  <text class="legend-step" x="64" y="48">Capability</text><text class="legend-tech" x="158" y="48">Technology</text>
+  <path class="line" d="M560 188 V225 H560 V254"/>
+<path class="line" d="M560 358 V395 H220 V424"/>
+<path class="line" d="M560 358 V395 H560 V424"/>
+<path class="line" d="M560 358 V395 H900 V424"/>
+<path class="line" d="M220 528 V565 H560 V594"/>
+<path class="line" d="M560 528 V565 H560 V594"/>
+<path class="line" d="M900 528 V565 H560 V594"/>
+  <g>
+      <rect class="node" x="340" y="92" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="126"><tspan x="560" dy="0">Patient and clinician apps</tspan></text>
+      <text class="tech" x="560" y="169">React</text>
+    </g>
+<g>
+      <rect class="node primary" x="340" y="262" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="296"><tspan x="560" dy="0">Clinical workflow APIs</tspan></text>
+      <text class="tech" x="560" y="339">Java + Spring Boot</text>
+    </g>
+<g>
+      <rect class="node" x="64" y="432" width="312" height="96" rx="7"/>
+      <text class="step" x="220" y="466"><tspan x="220" dy="0">Clinical records</tspan></text>
+      <text class="tech" x="220" y="509">PostgreSQL</text>
+    </g>
+<g>
+      <rect class="node" x="404" y="432" width="312" height="96" rx="7"/>
+      <text class="step" x="560" y="466"><tspan x="560" dy="0">Documents and images</tspan></text>
+      <text class="tech" x="560" y="509">Object storage</text>
+    </g>
+<g>
+      <rect class="node" x="744" y="432" width="312" height="96" rx="7"/>
+      <text class="step" x="900" y="466"><tspan x="900" dy="0">Integration events</tspan></text>
+      <text class="tech" x="900" y="509">Apache Kafka</text>
+    </g>
+<g>
+      <rect class="node" x="340" y="602" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="636"><tspan x="560" dy="0">Clinical exchange</tspan></text>
+      <text class="tech" x="560" y="679">FHIR + DICOM</text>
+    </g>
+</svg>

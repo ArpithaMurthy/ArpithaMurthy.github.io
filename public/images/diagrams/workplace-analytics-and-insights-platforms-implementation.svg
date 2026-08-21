@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 898" role="img" aria-labelledby="title description">
+  <title id="title">Workplace analytics and insights platform</title>
+  <desc id="description">One possible implementation of Workplace analytics and insights platform</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#83796b"/></marker>
+    <style>
+      .boundary { fill: none; stroke: #b9afa2; stroke-width: 2; stroke-dasharray: 7 7; }
+      .node { fill: #fff; stroke: #83796b; stroke-width: 2; }
+      .primary { fill: #fbf3f5; stroke: #b11f4b; }
+      .line { fill: none; stroke: #83796b; stroke-width: 2.5; marker-end: url(#arrow); }
+      .step { fill: #242424; font: 600 18px Manrope, "Segoe UI", sans-serif; text-anchor: middle; }
+      .tech { fill: #b11f4b; font: 500 14px Consolas, "Courier New", monospace; text-anchor: middle; }
+      .note { fill: #5c5c5c; font: 500 14px Manrope, "Segoe UI", sans-serif; text-anchor: middle; }
+      .boundary-label { fill: #b11f4b; font: 600 14px Manrope, "Segoe UI", sans-serif; letter-spacing: .4px; text-anchor: middle; }
+      .legend-step { fill: #242424; font: 600 14px Manrope, "Segoe UI", sans-serif; }
+      .legend-tech { fill: #b11f4b; font: 500 13px Consolas, "Courier New", monospace; }
+    </style>
+  </defs>
+  
+  <text class="legend-step" x="64" y="48">Capability</text><text class="legend-tech" x="158" y="48">Technology</text>
+  <path class="line" d="M560 188 V225 H560 V254"/>
+<path class="line" d="M560 358 V395 H560 V424"/>
+<path class="line" d="M560 528 V565 H326 V594"/>
+<path class="line" d="M560 528 V565 H794 V594"/>
+<path class="line" d="M326 698 V735 H560 V764"/>
+<path class="line" d="M794 698 V735 H560 V764"/>
+  <g>
+      <rect class="node" x="340" y="92" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="142"><tspan x="560" dy="0">Approved workplace signals</tspan></text>
+      
+    </g>
+<g>
+      <rect class="node primary" x="340" y="262" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="296"><tspan x="560" dy="0">Governed processing</tspan></text>
+      <text class="tech" x="560" y="339">Apache Spark</text>
+    </g>
+<g>
+      <rect class="node" x="340" y="432" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="466"><tspan x="560" dy="0">Versioned analytical data</tspan></text>
+      <text class="tech" x="560" y="509">Delta Lake</text>
+    </g>
+<g>
+      <rect class="node" x="106" y="602" width="440" height="96" rx="7"/>
+      <text class="step" x="326" y="636"><tspan x="326" dy="0">Definitions and policy</tspan></text>
+      <text class="tech" x="326" y="679">PostgreSQL</text>
+    </g>
+<g>
+      <rect class="node" x="574" y="602" width="440" height="96" rx="7"/>
+      <text class="step" x="794" y="636"><tspan x="794" dy="0">Privacy checks</tspan></text>
+      <text class="tech" x="794" y="679">OpenDP</text>
+    </g>
+<g>
+      <rect class="node" x="340" y="772" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="806"><tspan x="560" dy="0">Insight APIs and UI</tspan></text>
+      <text class="tech" x="560" y="849">ASP.NET Core + React</text>
+    </g>
+</svg>

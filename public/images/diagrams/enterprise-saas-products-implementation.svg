@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 728" role="img" aria-labelledby="title description">
+  <title id="title">Enterprise SaaS product</title>
+  <desc id="description">One possible implementation of Enterprise SaaS product</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#83796b"/></marker>
+    <style>
+      .boundary { fill: none; stroke: #b9afa2; stroke-width: 2; stroke-dasharray: 7 7; }
+      .node { fill: #fff; stroke: #83796b; stroke-width: 2; }
+      .primary { fill: #fbf3f5; stroke: #b11f4b; }
+      .line { fill: none; stroke: #83796b; stroke-width: 2.5; marker-end: url(#arrow); }
+      .step { fill: #242424; font: 600 18px Manrope, "Segoe UI", sans-serif; text-anchor: middle; }
+      .tech { fill: #b11f4b; font: 500 14px Consolas, "Courier New", monospace; text-anchor: middle; }
+      .note { fill: #5c5c5c; font: 500 14px Manrope, "Segoe UI", sans-serif; text-anchor: middle; }
+      .boundary-label { fill: #b11f4b; font: 600 14px Manrope, "Segoe UI", sans-serif; letter-spacing: .4px; text-anchor: middle; }
+      .legend-step { fill: #242424; font: 600 14px Manrope, "Segoe UI", sans-serif; }
+      .legend-tech { fill: #b11f4b; font: 500 13px Consolas, "Courier New", monospace; }
+    </style>
+  </defs>
+  
+  <text class="legend-step" x="64" y="48">Capability</text><text class="legend-tech" x="158" y="48">Technology</text>
+  <path class="line" d="M560 188 V225 H560 V254"/>
+<path class="line" d="M560 358 V395 H560 V424"/>
+<path class="line" d="M560 528 V565 H177.5 V594"/>
+<path class="line" d="M560 528 V565 H432.5 V594"/>
+<path class="line" d="M560 528 V565 H687.5 V594"/>
+<path class="line" d="M560 528 V565 H942.5 V594"/>
+  <g>
+      <rect class="node" x="340" y="92" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="126"><tspan x="560" dy="0">Product interface</tspan></text>
+      <text class="tech" x="560" y="169">React</text>
+    </g>
+<g>
+      <rect class="node primary" x="340" y="262" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="296"><tspan x="560" dy="0">Enterprise identity</tspan></text>
+      <text class="tech" x="560" y="339">OpenID Connect + SCIM</text>
+    </g>
+<g>
+      <rect class="node" x="340" y="432" width="440" height="96" rx="7"/>
+      <text class="step" x="560" y="466"><tspan x="560" dy="0">Tenant-aware APIs</tspan></text>
+      <text class="tech" x="560" y="509">ASP.NET Core</text>
+    </g>
+<g>
+      <rect class="node" x="64" y="602" width="227" height="96" rx="7"/>
+      <text class="step" x="177.5" y="636"><tspan x="177.5" dy="0">Transactional records</tspan></text>
+      <text class="tech" x="177.5" y="679">PostgreSQL</text>
+    </g>
+<g>
+      <rect class="node" x="319" y="602" width="227" height="96" rx="7"/>
+      <text class="step" x="432.5" y="636"><tspan x="432.5" dy="0">Bounded cache</tspan></text>
+      <text class="tech" x="432.5" y="679">Redis</text>
+    </g>
+<g>
+      <rect class="node" x="574" y="602" width="227" height="96" rx="7"/>
+      <text class="step" x="687.5" y="625"><tspan x="687.5" dy="0">Permission-filtered</tspan><tspan x="687.5" dy="22">search</tspan></text>
+      <text class="tech" x="687.5" y="679">OpenSearch</text>
+    </g>
+<g>
+      <rect class="node" x="829" y="602" width="227" height="96" rx="7"/>
+      <text class="step" x="942.5" y="636"><tspan x="942.5" dy="0">Durable workflows</tspan></text>
+      <text class="tech" x="942.5" y="679">Temporal</text>
+    </g>
+</svg>
