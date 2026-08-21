@@ -5,6 +5,7 @@ import { marked } from "marked";
 import { siteConfig } from "./siteConfig";
 import "./styles.css";
 
+const navItems = ["About", "Notes"];
 const featuredArticleSlugs = ["wellbeing"];
 const articleFiles = import.meta.glob("./articles/**/*.md", { query: "?raw", import: "default", eager: true });
 
@@ -103,6 +104,7 @@ function App() {
   return <div className="site-shell">
     <header className="site-header">
       <a className="wordmark" href="/" aria-label="Arpitha Murthy home">AM<span>.</span></a>
+      <nav aria-label="Main navigation">{navItems.map((item) => <a key={item} href={`/#${item.toLowerCase()}`}>{item}</a>)}</nav>
       <button className="icon-button" onClick={() => setTheme(theme === "light" ? "dark" : "light")} aria-label="Toggle color theme">{theme === "light" ? <Moon size={18} /> : <Sun size={18} />}</button>
     </header>
 
@@ -112,9 +114,9 @@ function App() {
         <div className="hero-aside" aria-label="Personal principles"><div className="aside-index" aria-hidden="true">AM</div><div className="aside-card"><p className="card-label">I try to live by</p><ul className="card-values"><li>Stay curious.</li><li>Build with care.</li><li>Share what I learn.</li></ul></div></div>
       </section>
 
-      <section id="about" className="about section-grid section-rule" aria-labelledby="about-title"><div className="section-kicker"><span>About</span></div><div className="about-content"><h2 id="about-title">I’m interested in the space between <span>people, ideas,</span> and <span>technology.</span></h2><div className="about-columns"><p>I like working through unclear problems until I can explain them simply and build something useful from them. Perpetually learning how to do it better.</p><p>Outside work, I’m usually reading a book, listening to a podcast, watching a series, or spending time with family. I also tend to notice the small details that make products easier to use.</p></div></div></section>
+      <section id="about" className="about section-rule" aria-labelledby="about-title"><div className="about-content"><h2 id="about-title">I’m interested in the space between <span>people, ideas,</span> and <span>technology.</span></h2><div className="about-columns"><p>I like working through unclear problems until I can explain them simply and build something useful from them. Perpetually learning how to do it better.</p><p>Outside work, I’m usually reading a book, listening to a podcast, watching a series, or spending time with family. I also tend to notice the small details that make products easier to use.</p></div></div></section>
 
-      <section id="notes" className="notes section-grid section-rule" aria-labelledby="notes-title"><div className="section-kicker"><span>Notes</span></div><div className="notes-content"><div className="notes-intro"><BookOpen size={21} /><h2 id="notes-title">Learnings</h2><p>I’m making room here for the things I’m figuring out. These are practical notes, useful rabbit holes, and lessons I’d like to remember.</p></div><div className="learning-groups">{articleGroups.map((group) => <section className="learning-group" key={group.key} aria-labelledby={`${group.key}-title`}><div className="group-heading"><h3 id={`${group.key}-title`}>{group.title}</h3><p>{group.description}</p></div><div className="learning-list">{group.articles.length > 0 ? group.articles.map((article) => <a className="learning-note" href={`/articles/${article.slug}/`} key={article.slug}><span>{article.title}</span><ArrowUpRight size={17} /></a>) : <div className="coming-soon"><span>Coming soon</span><Check size={16} /><p>The first note is taking shape.</p></div>}</div></section>)}</div></div></section>
+      <section id="notes" className="notes section-rule" aria-labelledby="notes-title"><div className="notes-content"><div className="notes-intro"><BookOpen size={21} /><h2 id="notes-title">Learnings</h2><p>I’m making room here for the things I’m figuring out. These are practical notes, useful rabbit holes, and lessons I’d like to remember.</p></div><div className="learning-groups">{articleGroups.map((group) => <section className="learning-group" key={group.key} aria-labelledby={`${group.key}-title`}><div className="group-heading"><h3 id={`${group.key}-title`}>{group.title}</h3><p>{group.description}</p></div><div className="learning-list">{group.articles.length > 0 ? group.articles.map((article) => <a className="learning-note" href={`/articles/${article.slug}/`} key={article.slug}><span>{article.title}</span><ArrowUpRight size={17} /></a>) : <div className="coming-soon"><span>Coming soon</span><Check size={16} /><p>The first note is taking shape.</p></div>}</div></section>)}</div></div></section>
 
       <section className="connect section-rule" aria-labelledby="connect-title"><p className="eyebrow">Have a thought to share?</p><h2 id="connect-title">Let’s learn something<br /><em>together.</em></h2><a className="button button-primary" href={siteConfig.linkedin} target="_blank" rel="noreferrer">Find me on LinkedIn <ArrowUpRight size={17} /></a></section>
     </main>}
