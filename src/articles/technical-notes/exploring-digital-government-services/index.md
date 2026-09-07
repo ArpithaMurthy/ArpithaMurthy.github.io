@@ -71,6 +71,10 @@ Official sources, policy versions, citations, and effective dates should accompa
 
 Public access cannot depend on one commercial agent. The direct website, assisted service, and offline route remain necessary for choice, accountability, and recovery.
 
+## Try the eligibility decision experiment
+
+The [explainable decision lab](https://github.com/ArpithaMurthy/system-design-experiments#digital-government) is a working prototype for applying a versioned policy, preserving the reason for a decision, filing a correction, and resolving an appeal without erasing history. It includes free accessibility and digital-identity resources.
+
 ## Questions I am wondering about
 
 1. What right, obligation, or public outcome does the service support?

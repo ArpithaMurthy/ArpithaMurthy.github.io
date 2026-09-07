@@ -371,6 +371,10 @@ The questions I want to keep open are:
 3. How are entitlement, geography, concurrency, advertising, and rights windows enforced?
 4. How will origins, CDNs, and regional capacity handle a live peak or provider failure?
 
+## Try the safe release experiment
+
+The [safe release lab](https://github.com/ArpithaMurthy/system-design-experiments#complex-web-apps) is a working prototype for starting a canary, injecting a regression, blocking promotion when the error budget is exceeded, and rolling back safely. It runs locally with free tools and records each applied or blocked decision.
+
 ## A review checklist before launch
 
 1. Are critical journeys, invariants, risks, and owners explicit?

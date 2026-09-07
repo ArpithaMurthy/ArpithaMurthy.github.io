@@ -131,6 +131,10 @@ Agent specific risks include misunderstood intent, <abbr title="Malicious instru
 
 The web or mobile app remains important as a place to inspect balances, compare choices, manage permissions, review agent history, dispute an action, and recover control.
 
+## Try the money transfer experiment
+
+The [idempotent transfer lab](https://github.com/ArpithaMurthy/system-design-experiments#banking) is a working prototype for balanced ledger entries, retrying the same request without moving money twice, and rejecting an overdraft without partially changing balances. It runs locally without a payment account or paid service.
+
 ## Questions I am wondering about
 
 1. What is the authoritative ledger, and can balances be rebuilt?

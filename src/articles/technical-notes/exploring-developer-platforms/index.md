@@ -71,6 +71,10 @@ Diagnosis with read access can be broad. Changes should be narrow. Production de
 
 Agent traces should show evidence, commands, tool results, and changes. The platform must resist prompt injection from logs, tickets, repositories, and documentation, all of which may be untrusted.
 
+## Try the self-service deploy experiment
+
+The [guarded deploy lab](https://github.com/ArpithaMurthy/system-design-experiments#developer-platforms) is a working prototype that blocks an unsigned artifact, records provenance, and allows deployment only after the policy gate passes. It can be run and changed locally with free tooling.
+
 ## Questions I am wondering about
 
 1. Which developer journeys are slow, risky, or repeatedly reinvented?

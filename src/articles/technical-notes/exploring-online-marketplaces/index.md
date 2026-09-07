@@ -70,6 +70,10 @@ Agent contracts need identity, quotas, disclosure, bounded negotiation authority
 
 Ranking and fraud systems must distinguish helpful automation from manipulation without requiring every participant to use the same agent provider.
 
+## Try the marketplace escrow experiment
+
+The [escrow workflow lab](https://github.com/ArpithaMurthy/system-design-experiments#marketplaces) is a working prototype that holds buyer funds, blocks an early seller payout, records fulfillment, and then releases the money. It uses mock balances and requires no payment account.
+
 ## Questions I am wondering about
 
 1. What does the platform promise to buyers and sellers?

@@ -82,6 +82,10 @@ Models time out, limit requests, change behavior, and return output in the wrong
 
 Tracing should connect user intent, model version, prompt version, retrieval references, tool calls, policy decisions, cost, and final outcome without exposing secrets.
 
+## Try the bounded agent experiment
+
+The [bounded agent lab](https://github.com/ArpithaMurthy/system-design-experiments#ai-agents) is a working prototype that separates a model proposal from deterministic permission checks, human approval, and tool execution. It includes a safe mock mode, an unsafe proposal to reject, and free resources for extending the design.
+
 ## Questions I am wondering about
 
 1. What task improves, and how will we know?

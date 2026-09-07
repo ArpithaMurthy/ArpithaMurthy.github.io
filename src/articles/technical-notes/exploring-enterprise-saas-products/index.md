@@ -71,6 +71,10 @@ Agents need the requesting user's effective permissions, narrow tools, tenant is
 
 Changes with serious consequences should be proposed for review or constrained by policy. Administrators need controls for enabled tools, model providers, retention, spending, and revocation.
 
+## Try the tenant isolation experiment
+
+The [tenant isolation lab](https://github.com/ArpithaMurthy/system-design-experiments#enterprise-saas) is a working prototype that rejects a cross-tenant request and derives the valid query scope from authenticated identity. It makes the policy decision and returned record count visible without requiring cloud infrastructure.
+
 ## Questions I am wondering about
 
 1. Does isolation hold outside the primary database?

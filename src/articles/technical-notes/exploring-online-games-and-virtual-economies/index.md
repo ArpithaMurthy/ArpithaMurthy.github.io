@@ -71,6 +71,10 @@ AI can power characters, coaching, moderation assistance, content tools, or play
 
 Player agents that automate play can become accessibility aids, bots, or cheats depending on context. The rules must state what automation is allowed and enforce it consistently.
 
+## Try the authoritative movement experiment
+
+The [server movement lab](https://github.com/ArpithaMurthy/system-design-experiments#online-games) is a working prototype that accepts a legal movement input but rejects an impossible client teleport without changing authoritative state. It includes free Godot and Nakama resources for taking the idea further.
+
 ## Questions I am wondering about
 
 1. Which state is authoritative, and how is latency hidden safely?

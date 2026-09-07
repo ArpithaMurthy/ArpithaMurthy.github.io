@@ -66,6 +66,10 @@ An agent can recommend. A policy and control layer checks device, site, operatin
 
 Model drift and sensor drift can look alike, so predictions need evidence and comparison with physical inspection.
 
+## Try the device command experiment
+
+The [offline command lab](https://github.com/ArpithaMurthy/system-design-experiments#iot) is a working prototype for queueing an expiring command and safely discarding it when a device reconnects too late. It requires no physical device or broker and points to free MQTT tooling for a real extension.
+
 ## Questions I am wondering about
 
 1. What must continue safely without cloud connectivity?

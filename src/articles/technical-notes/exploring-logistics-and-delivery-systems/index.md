@@ -66,6 +66,10 @@ Agents may investigate exceptions, contact partners, rebook a carrier, or propos
 
 Actions need bounded cost, approved partners, confirmation thresholds, and an audit trail connecting the exception to the chosen response. Human operators need a map and timeline to understand and override the plan.
 
+## Try the custody chain experiment
+
+The [package custody lab](https://github.com/ArpithaMurthy/system-design-experiments#logistics) is a working prototype that rejects delivery before pickup and records each valid transfer of physical custody. It runs locally and links to free routing and observability resources.
+
 ## Questions I am wondering about
 
 1. Which events prove custody, inventory, and delivery?

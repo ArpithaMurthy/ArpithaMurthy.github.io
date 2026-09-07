@@ -65,6 +65,10 @@ The product should distinguish tutoring, drafting, assessment, and grading conte
 
 Grading and disciplinary decisions with serious consequences need human accountability. Agent evaluation should measure learning outcomes, factuality, accessibility, age suitability, bias, and whether the system encourages understanding rather than dependency.
 
+## Try the offline assessment experiment
+
+The [assessment sync lab](https://github.com/ArpithaMurthy/system-design-experiments#education) is a working prototype for queueing an attempt offline, blocking an impossible sync, reconnecting, and deduplicating repeated uploads. It runs without an LMS account and links to free interoperability resources.
+
 ## Questions I am wondering about
 
 1. What learning outcome is the product trying to improve?

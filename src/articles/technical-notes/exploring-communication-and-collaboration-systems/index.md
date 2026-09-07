@@ -67,6 +67,10 @@ Participants need to know when an agent is present, what it records, where outpu
 
 Sending a message, accepting a meeting, or assigning work on someone's behalf requires clear delegation. Private context from one conversation must not silently influence another.
 
+## Try the message delivery experiment
+
+The [message delivery lab](https://github.com/ArpithaMurthy/system-design-experiments#collaboration) is a working prototype for durable send, deduplication, delivery, and read states. Its event history makes the difference between each acknowledgement visible and links to free WebSocket and collaborative-editing resources.
+
 ## Questions I am wondering about
 
 1. What do sent, delivered, read, edited, and deleted mean?

@@ -134,6 +134,10 @@ Telemetry itself is untrusted input. Logs, tickets, and device names can contain
 
 Remediation raises the bar. Restarting a service, changing configuration, suppressing an alert, or isolating a device should pass through deterministic policy and often human approval. The agent may propose a plan, but the platform remains responsible for whether that plan is allowed.
 
+## Try the telemetry pipeline experiment
+
+The [burst-safe telemetry lab](https://github.com/ArpithaMurthy/system-design-experiments#observability) is a working prototype for buffering a traffic burst, enforcing a tenant quota, measuring dropped events, and draining accepted data to storage. It links to free OpenTelemetry and Prometheus resources.
+
 ## Questions I am wondering about
 
 1. Which operational questions must the platform answer quickly?

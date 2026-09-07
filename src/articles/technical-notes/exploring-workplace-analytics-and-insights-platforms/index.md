@@ -131,6 +131,10 @@ Actions such as declining meetings, changing work hours, messaging colleagues, o
 
 Prompt and tool logs must not become a new store of sensitive workplace data. Retention, redaction, use by model providers, and access need the same governance as the analytics platform.
 
+## Try the privacy threshold experiment
+
+The [aggregate insight lab](https://github.com/ArpithaMurthy/system-design-experiments#workplace-analytics) is a working prototype that hides an insight for a group below the privacy threshold and publishes it only after the cohort is large enough. It links to free privacy-framework and differential-privacy resources.
+
 ## Questions I am wondering about
 
 1. What beneficial purpose justifies each signal and metric?

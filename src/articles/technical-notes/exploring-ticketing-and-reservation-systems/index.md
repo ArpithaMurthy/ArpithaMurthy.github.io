@@ -88,7 +88,7 @@ Purchases, destructive cancellations, and expensive changes deserve explicit con
 
 ## Try the reservation experiment
 
-The [reservation agent lab](https://github.com/ArpithaMurthy/system-design-experiments) turns several ideas from this note into a small application that can be cloned and changed locally. It demonstrates authoritative seat holds, idempotent requests, expiry, deterministic agent limits, explicit purchase approval, and audit history.
+The [reservation agent lab](https://github.com/ArpithaMurthy/system-design-experiments#reservations) turns several ideas from this note into a small application that can be cloned and changed locally. It demonstrates authoritative seat holds, idempotent requests, expiry, deterministic agent limits, explicit purchase approval, and audit history.
 
 Mock mode works without an account, API key, paid service, or model download. An optional Ollama mode can use a local model while ordinary code continues to enforce availability and price limits.
 

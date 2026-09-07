@@ -69,6 +69,10 @@ An agent should not diagnose, prescribe, disclose records, or change an order me
 
 Evaluation needs clinically representative cases, subgroup analysis, harmful omission checks, prompt injection tests, and monitoring for <abbr title="The tendency to trust an automated recommendation even when other evidence suggests it is wrong">automation bias</abbr>. The interface must let a person inspect sources, correct output, and know when a qualified human is needed.
 
+## Try the contextual access experiment
+
+The [health record access lab](https://github.com/ArpithaMurthy/system-design-experiments#healthcare) is a working prototype for consent-gated access and an explicit emergency path that creates a mandatory audit review. It runs with mock records and links to free FHIR and OpenMRS resources.
+
 ## Questions I am wondering about
 
 1. Which decisions can harm a patient if data is wrong, late, or missing?

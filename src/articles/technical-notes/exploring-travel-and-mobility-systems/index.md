@@ -82,6 +82,10 @@ The agent should carry bounded preferences and delegated authority. A change in 
 
 An agent is especially useful during disruption, when it can gather alternatives. It is also risky then because inventory changes quickly. Offers need expiry times, and the backend must revalidate price and availability at commitment.
 
+## Try the trip assignment experiment
+
+The [trip assignment lab](https://github.com/ArpithaMurthy/system-design-experiments#travel-mobility) is a working prototype that creates one trip, atomically assigns one driver, and preserves both across a retried client request. It runs with mock location data and links to free transit and optimization resources.
+
 ## Questions I am wondering about
 
 1. What are the authoritative states and legal transitions for a journey?

@@ -66,6 +66,10 @@ Submitting an offer, application, signature, payment, or notice needs explicit a
 
 The direct app remains useful for map exploration, document review, permission management, and disputes where visual and legal context matter.
 
+## Try the verified listing experiment
+
+The [listing lifecycle lab](https://github.com/ArpithaMurthy/system-design-experiments#real-estate) is a working prototype for verifying and publishing one version of a property claim, then invalidating that verification after a material edit. It links to free geospatial data and tooling.
+
 ## Questions I am wondering about
 
 1. How are property identity, units, listings, and ownership distinguished?
