@@ -7,6 +7,7 @@ const siteName = "Arpitha Murthy";
 const authorLinks = [
   "https://github.com/arpithamurthy",
   "https://www.linkedin.com/in/arpithadmurthy/",
+  "https://x.com/Arpithadmurthy",
 ];
 const articlesDirectory = path.resolve("src/articles");
 const outputDirectory = path.resolve("dist");
@@ -62,6 +63,7 @@ function injectMetadata(html, article) {
     `<meta property="og:description" content="${escapeHtml(article.summary)}" />`,
     `<meta property="og:url" content="${canonicalUrl}" />`,
     '<meta name="twitter:card" content="summary" />',
+    '<meta name="twitter:creator" content="@Arpithadmurthy" />',
     `<meta name="twitter:title" content="${escapeHtml(article.title)}" />`,
     `<meta name="twitter:description" content="${escapeHtml(article.summary)}" />`,
     `<script type="application/ld+json">${schema}</script>`,
@@ -78,7 +80,7 @@ function articleShell(article) {
   return `<div class="site-shell">
     <header class="site-header"><a class="wordmark" href="/" aria-label="Arpitha Murthy home">AM<span>.</span></a><nav aria-label="Main navigation"><a href="/#about">About</a><a href="/#notes">Notes</a></nav></header>
     <main id="top" class="article-page"><a class="back-link" href="/#notes">← All notes</a><article class="article-shell"><div class="article-body">${article.html}</div></article></main>
-    <footer><p class="footer-disclosure">I use AI tools to help explore, structure, and edit some notes.</p><div class="footer-links"><a href="${authorLinks[0]}">GitHub</a><a href="${authorLinks[1]}">LinkedIn</a></div></footer>
+    <footer><p class="footer-disclosure">I use AI tools to help explore, structure, and edit some notes.</p><div class="footer-links"><a href="${authorLinks[0]}">GitHub</a><a href="${authorLinks[1]}">LinkedIn</a><a href="${authorLinks[2]}">X</a></div></footer>
   </div>`;
 }
 
@@ -135,6 +137,7 @@ ${articles.filter((article) => article.category === "Reflections").map((article)
 - [RSS feed](${siteUrl}/feed.xml)
 - [GitHub](${authorLinks[0]})
 - [LinkedIn](${authorLinks[1]})
+- [X](${authorLinks[2]})
 `;
 
 const llmsFull = `# Arpitha Murthy — Full article collection

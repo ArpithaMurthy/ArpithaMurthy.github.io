@@ -121,7 +121,7 @@ function App() {
       <section className="connect section-rule" aria-labelledby="connect-title"><p className="eyebrow">Have a thought to share?</p><h2 id="connect-title">Let’s learn something<br /><em>together.</em></h2><a className="button button-primary" href={siteConfig.linkedin} target="_blank" rel="noreferrer">Find me on LinkedIn <ArrowUpRight size={17} /></a></section>
     </main>}
 
-    <footer><p className="footer-disclosure">I use AI tools to help explore, structure, and edit some notes.</p><div className="footer-links"><a href={siteConfig.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14} /></a><a href={siteConfig.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a></div></footer>
+    <footer><p className="footer-disclosure">I use AI tools to help explore, structure, and edit some notes.</p><div className="footer-links"><a href={siteConfig.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14} /></a><a href={siteConfig.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a><a href={siteConfig.x} target="_blank" rel="noreferrer">X <ArrowUpRight size={14} /></a></div></footer>
   </div>;
 }
 
