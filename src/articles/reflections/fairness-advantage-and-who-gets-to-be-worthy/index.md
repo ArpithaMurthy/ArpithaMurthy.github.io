@@ -1,12 +1,14 @@
 # Fairness, Advantage, and Who Gets to Be Worthy
 
-We often say that fairness means treating everyone equally. But are people really equal when they begin life with different levels of wealth, support, safety, education, and influence? I keep wondering whether we care about injustice only when it harms us, and how easily we accept it when it works in our favor.
+Fairness is often described as treating people equally, but equal rules can have unequal effects when people begin with different levels of wealth, support, safety, education, and influence. I keep wondering whether we care about injustice only when it harms us, and how easily we accept it when it works in our favor.
 
 ## Is equality always fair?
 
-The dictionary meaning of fairness sounds simple: treating people equally and without favoritism. In practice, equality is more complicated. Giving everyone the same opportunity does not erase the differences in where they started or what they had to overcome to reach it.
+It helps me to distinguish equal treatment from a fair opportunity. Giving everyone the same application form is equal treatment; it does not ensure that everyone had a realistic chance to prepare, access the process, or meet its requirements.
 
-Two people may apply to the same school or job under the same rules. One may have had excellent teachers, financial security, useful connections, and the freedom to focus. The other may have had equal ability but fewer resources and more responsibilities. The process can look equal while still rewarding advantages that existed long before either person entered the room.
+Imagine two students taking the same exam under the same rules. One had stable housing, time to study, and access to tutoring; the other had none of those supports. The exam treats them alike on the day, but their opportunities to prepare were not alike. Providing tutoring or accommodations might make access fairer without guaranteeing that both students receive the same score.
+
+That distinction does not settle every debate. Different outcomes do not by themselves prove that a process was unfair, just as identical rules do not prove that everyone had a meaningful opportunity. I want to ask both how a decision was made and what barriers shaped people's ability to take part.
 
 ## Who gets to be called worthy?
 
@@ -28,7 +30,7 @@ Perhaps caring about fairness means being willing to examine an advantage even w
 
 People are not the same. We have different abilities, histories, needs, ambitions, and circumstances. Pretending that these differences do not exist does not create justice. At the same time, those differences do not make one person's dignity greater than another's.
 
-Maybe fairness is not the claim that everyone is identical. It is the belief that every person deserves to be treated as fully human, and that opportunity should not be permanently decided by birth.
+Maybe fairness is not the claim that everyone is identical or must reach the same outcome. It is the belief that every person deserves equal dignity, and that opportunity should not be permanently decided by birth.
 
 ## What I am still asking
 

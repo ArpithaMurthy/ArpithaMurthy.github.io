@@ -12,9 +12,7 @@ Judgment had quietly become a habit. Once my mind learned to rank people, it did
 
 ## The stories I imagine others tell about me
 
-Sociologist Charles Horton Cooley described the idea of the **looking-glass self**. I partly form my view of myself by imagining how other people see me. The idea is often paraphrased this way:
-
-> I am not what I think I am. I am not what you think I am. I am what I think you think I am.
+Sociologist Charles Horton Cooley called this the **looking-glass self**: our view of ourselves can be shaped partly by how we imagine other people see us. I can imagine how I appear to someone, guess what they think of me, and then respond to that imagined judgment as though it were a fact. Cooley developed this idea in *Human Nature and the Social Order* (1902).
 
 That idea stayed with me. Sometimes I was not reacting to what another person had actually said or thought. I was reacting to my own guess about their judgment. I could feel inadequate in front of an opinion that might never have existed.
 
@@ -32,11 +30,7 @@ I have started asking myself another question: if I were the only person in the 
 
 The question does not mean that other people are unimportant. I still need relationships, community, and shared purpose. But it helps me separate what I genuinely value from what I want only because it may change how others rank me.
 
-Do I know who was considered the wealthiest, most beautiful, or most intelligent person in the world yesterday? Even if I did, someone new might receive that title tomorrow. There may never be one honest way to decide who is the most beautiful or intelligent. Yet I can spend so much of my life tracking these temporary rankings and wondering where I stand within them.
-
-I will eventually die, and with enough time I may be forgotten. At first, that thought can make every effort seem pointless. But perhaps the point was never to remain at the top of a list or to be remembered forever. My life can matter in the present: in what I learn, what I create, how I care for people, and how fully I experience the time I have.
-
-Knowing that life is temporary does not have to remove its meaning. It can free me to choose a meaning that does not depend on being better than someone else, but on being a little better than I was yesterday.
+I can spend a lot of energy tracking temporary rankings and wondering where I stand. Asking whether I would still choose something if nobody were watching helps me notice what I value for its own sake: what I learn, what I create, and how I care for people.
 
 ## What changed for me
 
@@ -44,4 +38,4 @@ Not judging does not mean that every action is right or that I should abandon di
 
 I am still learning this. Judgment can return before I even notice it. But now I try to pause and ask whether I understand enough to decide what another person deserves, and whether I would speak to myself as harshly as the voice in my mind does.
 
-I thought giving up judgment would mainly make me kinder to others. Instead, it gave me freedom from some of my own criticism. By measuring other people less, I started measuring myself less too. I became more able to believe that I do not have to be better than someone else to be enough.
+I thought giving up judgment would mainly make me kinder to others. Instead, it also softened some of my own criticism. I do not have to be better than someone else to be enough; I can focus on living by my values and treating both myself and others with more patience.

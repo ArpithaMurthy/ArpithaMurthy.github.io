@@ -50,6 +50,18 @@ Result shown to the user
 
 Each tool should do a small, clearly defined job and receive only the access it needs. When a request may be retried, repeating it should not accidentally repeat the outcome. An agent should never receive a database credential as a shortcut around an API.
 
+## Example: summarize an approved policy
+
+Imagine an employee asks an assistant to summarize a benefits policy. The flow could be:
+
+1. Authenticate the employee and determine which policy documents they are allowed to read.
+2. Retrieve only permitted, current passages and keep their source references.
+3. Ask the model to draft a summary from those passages without giving it tools to change records.
+4. Check that the cited passages support the answer; if retrieval is weak, say so and link to the original policy.
+5. Show the sources and offer a way to report an outdated or incorrect answer.
+
+The model helps interpret and summarize. Identity, document access, and source selection remain enforced by ordinary application code.
+
 ## Show where information came from
 
 Retrieval quality depends on source quality, chunking, freshness, permissions, and ranking. Every retrieved item must respect the requesting user's access before entering the prompt.

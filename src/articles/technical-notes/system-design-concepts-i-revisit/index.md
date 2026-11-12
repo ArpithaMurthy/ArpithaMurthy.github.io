@@ -2,6 +2,16 @@
 
 System design can feel like a long list of terms. I want this note to connect the ideas so I can return to them. The question behind every concept is simple: what problem does it help me reason about, and what tradeoff does it introduce?
 
+## A map for this note
+
+- [Requirements and tradeoffs](#requirements)
+- [Data and consistency](#data-and-consistency)
+- [Scale and communication](#scale-and-communication)
+- [Reliability and security](#reliability-and-security)
+- [Change and ownership](#change-and-ownership)
+- [Takeaways](#takeaways)
+
+<span id="requirements"></span>
 ## Start with the problem, not the architecture
 
 Before choosing a database, cache, or queue, I want to understand what the system must do.
@@ -99,6 +109,7 @@ User → DNS → CDN or load balancer → Gateway → Service
 
 Each layer should solve a specific problem. Adding all of them by default creates more configuration and more places for failure. I want to define health checks, routing policy, failover behavior, connection draining, and what happens when an instance or an entire region becomes unavailable. Sticky sessions can preserve local session affinity, but stateless services or shared session state usually make rebalancing and recovery easier.
 
+<span id="data-and-consistency"></span>
 ## Data models should begin with access patterns
 
 The database choice follows the shape of the data, the queries, and the correctness guarantees. Relational storage is useful when relationships and transactions matter. Key value, document, column, graph, and search systems each serve different access patterns.
@@ -192,6 +203,7 @@ Write → Node A → replication → Node B
 
 I do not want to remember BASE as the opposite of ACID. They answer different questions. ACID protects the correctness of a transaction. BASE describes how distributed state may behave across time. Some systems need both in different places.
 
+<span id="scale-and-communication"></span>
 ## Scaling changes how work and state are distributed
 
 Vertical scaling gives one machine more capacity. Horizontal scaling adds more machines. Horizontal scaling can increase capacity and resilience, but only when work and state can be distributed safely.
@@ -271,6 +283,7 @@ Local transaction → Outbox → Event → Next step
 
 Compensation is not the same as erasing history. Refunding a payment is a new action, not an undo button. I want the workflow to define ownership, retries, duplicate handling, and what a human can do when automation cannot finish.
 
+<span id="reliability-and-security"></span>
 ## Failure handling should avoid making failure larger
 
 Distributed calls will eventually be slow or unavailable. A few small patterns help contain the effect.
@@ -331,6 +344,7 @@ Primary region → replicated state → Recovery region
 
 Backups matter only if they can be restored. Multi region architecture matters only if failover, data consistency, capacity, and failback have been exercised. More regions can improve resilience, but they also add coordination and operational cost.
 
+<span id="change-and-ownership"></span>
 ## Data evolution must work while old and new shapes coexist
 
 Stored data, API payloads, and events outlive the code version that created them. A safe change assumes that producers, consumers, and records will not all move to the new shape at once.
@@ -361,6 +375,7 @@ A technically possible design can still be a poor system if no team can operate 
 
 At a broader level, I want to ask who owns each capability, where decisions are documented, which standards should be shared, and where teams need freedom. A good design gives the organization a path to evolve, not only a diagram that works on launch day.
 
+<span id="takeaways"></span>
 ## What I want to carry forward
 
 System design is not about collecting the most technologies. It is about making choices that fit the problem and being honest about what each choice costs.

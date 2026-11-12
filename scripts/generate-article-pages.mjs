@@ -77,9 +77,13 @@ function injectMetadata(html, article) {
 }
 
 function articleShell(article) {
+  const isHistory = article.category === "Software history";
+  const backLink = isHistory ? "/#history" : "/#notes";
+  const backLabel = isHistory ? "Software history" : "All notes";
+
   return `<div class="site-shell">
-    <header class="site-header"><a class="wordmark" href="/" aria-label="Arpitha Murthy home">AM<span>.</span></a><nav aria-label="Main navigation"><a href="/#about">About</a><a href="/#notes">Notes</a></nav></header>
-    <main id="top" class="article-page"><a class="back-link" href="/#notes">← All notes</a><article class="article-shell"><div class="article-body">${article.html}</div></article></main>
+    <header class="site-header"><a class="wordmark" href="/" aria-label="Arpitha Murthy home">AM<span>.</span></a><nav aria-label="Main navigation"><a href="/#about">About</a><a href="/#notes">Notes</a><a href="/#history">History</a></nav></header>
+    <main id="top" class="article-page"><a class="back-link" href="${backLink}">← ${backLabel}</a><article class="article-shell"><div class="article-body">${article.html}</div></article></main>
     <footer><p class="footer-disclosure">I use AI tools to help explore, structure, and edit some notes.</p><div class="footer-links"><a href="${authorLinks[0]}">GitHub</a><a href="${authorLinks[1]}">LinkedIn</a><a href="${authorLinks[2]}">X</a></div></footer>
   </div>`;
 }
@@ -90,14 +94,18 @@ for (const filename of articleFiles) {
   const content = await readFile(absolutePath, "utf8");
   const basename = path.basename(filename, ".md");
   const sourceName = basename === "index" ? path.basename(path.dirname(filename)) : basename;
+  const isHistory = filename.includes("software-history/");
+  const slug = isHistory
+    ? sourceName.replace(/^\d+-/, "")
+    : sourceName.replace(/^\d{4}-\d{2}-\d{2}-/, "");
   const tokens = marked.lexer(content);
   const heading = tokens.find((token) => token.type === "heading" && token.depth === 1);
   const paragraph = tokens.find((token) => token.type === "paragraph");
   const article = {
-    slug: sourceName.replace(/^\d{4}-\d{2}-\d{2}-/, ""),
+    slug,
     title: plainText(heading?.text || sourceName),
     summary: plainText(paragraph?.text || "Notes by Arpitha Murthy.").slice(0, 300),
-    category: filename.includes("technical-notes") ? "Technical notes" : "Reflections",
+    category: filename.includes("technical-notes") ? "Technical notes" : isHistory ? "Software history" : "Reflections",
     content,
     html: marked.parse(content),
   };
